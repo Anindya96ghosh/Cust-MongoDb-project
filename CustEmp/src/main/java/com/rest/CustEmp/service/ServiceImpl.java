@@ -34,7 +34,7 @@ public class ServiceImpl implements Service{
 	}
 
 	public void deleteCustomer(int customerId) {
-		repository.deleteByCustomerId(customerId);
+		repository.delete(repository.findByCustomerId(customerId).get());
 		
 	}
 
